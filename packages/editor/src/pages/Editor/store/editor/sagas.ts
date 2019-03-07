@@ -87,6 +87,7 @@ function* onFileOpenSaga(action: ActionType<typeof editor.newFileOpened>) {
     isAutoFormatEnabled &&
     action.payload.file.language === 'typescript'
   ) {
+    debugger;
     yield put(editor.applyFormatting());
   }
 
@@ -275,6 +276,7 @@ function* resizeEditorSaga() {
 }
 
 function* applyFormattingSaga() {
+  debugger;
   if (monacoEditor) {
     monacoEditor.trigger(
       'editor' /* source, unused */,

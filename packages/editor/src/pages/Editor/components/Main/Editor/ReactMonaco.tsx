@@ -44,6 +44,7 @@ export class ReactMonaco extends Component<IProps, IState> {
         const newModel = this.getModel();
         newModel.updateOptions({ tabSize: this.props.tabSize });
         this.editor.setModel(newModel);
+        debugger;
       }
     }
   }
@@ -104,6 +105,7 @@ export class ReactMonaco extends Component<IProps, IState> {
   };
 
   clearAllModels = () => {
+    debugger;
     monaco.editor.getModels().forEach(model => model.dispose());
   };
 
